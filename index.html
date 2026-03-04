@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Joshi | AI/ML Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Shivam Joshi — AI/ML Engineering Student building intelligent systems and real-world AI applications.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">SJ</div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot" class="cursor-dot"></div>
+    <div id="cursor-ring" class="cursor-ring"></div>
+
+    <!-- Particle Canvas Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Animated background glows -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-brand" data-magnetic>SJ</div>
+        <div class="nav-links">
+            <a href="#hero" class="nav-link active" data-magnetic>Home</a>
+            <a href="#about" class="nav-link" data-magnetic>About</a>
+            <a href="#skills" class="nav-link" data-magnetic>Skills</a>
+            <a href="#projects" class="nav-link" data-magnetic>Projects</a>
+            <a href="#contact" class="nav-link" data-magnetic>Contact</a>
+        </div>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="badge-dot"></span>
+                Open to Opportunities
+            </div>
+            <h1 class="hero-title reveal">
+                Hi, I'm <span class="gradient-text scramble-text" data-text="Shivam Joshi">Shivam Joshi</span>
+            </h1>
+            <p class="hero-subtitle reveal">
+                <span id="typewriter" class="typewriter"></span>
+                <span class="typewriter-cursor">|</span>
+            </p>
+            <p class="hero-description reveal">
+                Building intelligent machine learning systems and real-world AI applications
+                that solve meaningful problems.
+            </p>
+            <div class="hero-cta reveal">
+                <a href="#projects" class="btn btn-primary magnetic-btn" data-magnetic>
+                    <span class="btn-text">View My Work</span>
+                    <span class="btn-ripple"></span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-outline magnetic-btn" data-magnetic>
+                    <span class="btn-text">Get In Touch</span>
+                    <span class="btn-ripple"></span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual reveal">
+            <div class="code-window" id="code-window">
+                <div class="code-header">
+                    <span class="code-dot red"></span>
+                    <span class="code-dot yellow"></span>
+                    <span class="code-dot green"></span>
+                    <span class="code-filename">ai_model.py</span>
+                </div>
+                <pre class="code-body" id="code-body"></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="section-number">01.</span> About Me
+            </h2>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        I'm an <strong>AI/ML Engineering student</strong> driven by a deep curiosity for how
+                        intelligent systems can transform the way we live and work. I specialize in building
+                        <span class="highlight">machine learning pipelines</span>, designing
+                        <span class="highlight">recommendation systems</span>, and developing
+                        <span class="highlight">AI-powered analytical tools</span>.
+                    </p>
+                    <p>
+                        My approach combines strong theoretical foundations with hands-on engineering — I don't
+                        just build models, I build complete systems that deliver real-world impact.
+                    </p>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card tilt-card">
+                        <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Projects Built</span>
+                    </div>
+                    <div class="stat-card tilt-card">
+                        <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">ML Models Deployed</span>
+                    </div>
+                    <div class="stat-card tilt-card">
+                        <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Technologies Mastered</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="section-number">02.</span> Skills & Tools
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-card tilt-card reveal" style="--delay: 0">
+                    <div class="card-glow"></div>
+                    <div class="skill-icon">🧠</div>
+                    <h3>Machine Learning</h3>
+                    <p>Supervised & unsupervised learning, model optimization, feature engineering</p>
+                    <div class="skill-tags">
+                        <span>Scikit-learn</span><span>XGBoost</span><span>LightGBM</span>
+                    </div>
+                </div>
+                <div class="skill-card tilt-card reveal" style="--delay: 1">
+                    <div class="card-glow"></div>
+                    <div class="skill-icon">🔮</div>
+                    <h3>Deep Learning</h3>
+                    <p>Neural networks, CNNs, transformers, transfer learning architectures</p>
+                    <div class="skill-tags">
+                        <span>TensorFlow</span><span>PyTorch</span><span>Keras</span>
+                    </div>
+                </div>
+                <div class="skill-card tilt-card reveal" style="--delay: 2">
+                    <div class="card-glow"></div>
+                    <div class="skill-icon">📊</div>
+                    <h3>Data Science</h3>
+                    <p>Data analysis, visualization, statistical modeling, exploratory analysis</p>
+                    <div class="skill-tags">
+                        <span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+                    </div>
+                </div>
+                <div class="skill-card tilt-card reveal" style="--delay: 3">
+                    <div class="card-glow"></div>
+                    <div class="skill-icon">🤖</div>
+                    <h3>NLP & LLMs</h3>
+                    <p>Large Language Models, text analysis, document understanding, RAG systems</p>
+                    <div class="skill-tags">
+                        <span>Langchain</span><span>HuggingFace</span><span>OpenAI</span>
+                    </div>
+                </div>
+                <div class="skill-card tilt-card reveal" style="--delay: 4">
+                    <div class="card-glow"></div>
+                    <div class="skill-icon">⚡</div>
+                    <h3>Backend & APIs</h3>
+                    <p>Building robust APIs and microservices for ML model deployment</p>
+                    <div class="skill-tags">
+                        <span>Python</span><span>Flask</span><span>FastAPI</span>
+                    </div>
+                </div>
+                <div class="skill-card tilt-card reveal" style="--delay: 5">
+                    <div class="card-glow"></div>
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Tools & DevOps</h3>
+                    <p>Version control, containerization, cloud deployment, CI/CD pipelines</p>
+                    <div class="skill-tags">
+                        <span>Git</span><span>Docker</span><span>AWS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="section-number">03.</span> Featured Projects
+            </h2>
+            <div id="github-projects" class="projects-grid">
+                <!-- Loading skeletons -->
+                <div class="project-skeleton">
+                    <div class="skeleton-line skeleton-icon"></div>
+                    <div class="skeleton-line skeleton-title"></div>
+                    <div class="skeleton-line skeleton-desc"></div>
+                    <div class="skeleton-line skeleton-desc short"></div>
+                    <div class="skeleton-line skeleton-tags"></div>
+                </div>
+                <div class="project-skeleton">
+                    <div class="skeleton-line skeleton-icon"></div>
+                    <div class="skeleton-line skeleton-title"></div>
+                    <div class="skeleton-line skeleton-desc"></div>
+                    <div class="skeleton-line skeleton-desc short"></div>
+                    <div class="skeleton-line skeleton-tags"></div>
+                </div>
+            </div>
+            <div class="github-profile-link reveal">
+                <a href="https://github.com/idleshivam" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-outline magnetic-btn" data-magnetic>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                    <span class="btn-text">View All on GitHub</span>
+                    <span class="btn-ripple"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="section-number">04.</span> Get In Touch
+            </h2>
+            <div class="contact-content reveal">
+                <p class="contact-text">
+                    I'm always interested in hearing about new opportunities, collaborations,
+                    and interesting AI/ML projects. Whether you have a question or just want to say hello,
+                    feel free to reach out!
+                </p>
+                <a href="mailto:shivamjoshi096@gmail.com" class="btn btn-primary btn-lg magnetic-btn" data-magnetic>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                        </path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span class="btn-text">Say Hello</span>
+                    <span class="btn-ripple"></span>
+                </a>
+                <div class="contact-email">shivamjoshi096@gmail.com</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://github.com/idleshivam" target="_blank" rel="noopener noreferrer" class="footer-social"
+                aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                </svg>
+            </a>
+            <a href="mailto:shivamjoshi096@gmail.com" class="footer-social" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a>
+        </div>
+        <p>Designed & Built by <span class="gradient-text">Shivam Joshi</span></p>
+        <p class="footer-sub">© 2026 — All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
