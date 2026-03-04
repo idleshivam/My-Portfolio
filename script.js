@@ -477,9 +477,9 @@ async function fetchGitHubRepos() {
         if (!response.ok) throw new Error('GitHub API error');
         const repos = await response.json();
 
-        // Filter out forks and profile README repos
+        // Only show repos that are in projectConfig
         const filteredRepos = repos.filter(repo =>
-            !repo.fork && repo.name !== GITHUB_USERNAME
+            projectConfig.hasOwnProperty(repo.name)
         );
 
         renderProjects(filteredRepos);
