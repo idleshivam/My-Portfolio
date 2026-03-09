@@ -443,12 +443,14 @@ const projectConfig = {
     'AI-Policy-Gap-Impact-Analyzer': {
         techStack: ['Python', 'LangChain', 'LLMs', 'RAG', 'Streamlit'],
         demo: '',
-        result: 'Extracts eligibility, benefits & demographics from government PDFs using LLMs'
+        description: 'Led a team to build an AI-powered policy analysis system that ingests government scheme PDFs and uses LLM-driven RAG pipelines to extract eligibility criteria, benefits, constraints, and target demographics. As team lead, I architected and built the entire backend — from document parsing to LLM orchestration.',
+        result: '🏆 Won the LLM Workshop · Team Lead & Backend Developer · Processes 50+ page policy documents with structured output via LangChain & RAG'
     },
     'ai-production-planning-ip': {
         techStack: ['Python', 'Flask', 'PuLP', 'Integer Programming'],
         demo: 'https://ai-production-planning-ip.onrender.com',
-        result: 'Optimizes production decisions using AI-driven integer programming for resource allocation',
+        description: 'Solo mini project — designed and deployed a full-stack AI optimization tool that solves production planning problems using Integer Programming. Users input resource constraints and costs via a web interface, and the system computes the optimal allocation in real time.',
+        result: 'Solo Mini Project · Live on Render · Automates constraint-based production optimization with PuLP solver',
         language: 'Python'
     },
 };
@@ -505,7 +507,7 @@ function renderProjects(repos) {
         const config = projectConfig[repo.name] || {};
         const displayLang = config.language || repo.language;
         const langColor = langColors[displayLang] || langColors['default'];
-        const description = repo.description || 'No description available.';
+        const description = config.description || repo.description || 'No description available.';
 
         // Tech stack: use config if available, else fall back to API topics/language
         const techStack = config.techStack
@@ -597,10 +599,10 @@ function renderFallbackProjects() {
                 </div>
             </div>
             <h3 class="project-title">AI Policy Gap Impact Analyzer</h3>
-            <p class="project-desc">AI-powered public policy analysis system. Upload government scheme documents (PDFs) analyzed using LLMs to extract eligibility criteria, benefits, constraints, and target demographics.</p>
+            <p class="project-desc">Led a team to build an AI-powered policy analysis system that ingests government scheme PDFs and uses LLM-driven RAG pipelines to extract eligibility criteria, benefits, constraints, and target demographics. As team lead, I architected and built the entire backend — from document parsing to LLM orchestration.</p>
             <div class="project-result">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                <span>Extracts eligibility, benefits & demographics from government PDFs using LLMs</span>
+                <span>🏆 Won the LLM Workshop · Team Lead & Backend Developer · Processes 50+ page policy documents with structured output via LangChain & RAG</span>
             </div>
             <div class="project-actions">
                 <a href="https://github.com/idleshivam/AI-Policy-Gap-Impact-Analyzer" target="_blank" rel="noopener noreferrer" class="project-action-btn">

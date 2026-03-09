@@ -683,6 +683,56 @@ nav.scrolled {
     font-weight: 500;
 }
 
+/* Education badge */
+.education-badge {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: rgba(108, 92, 231, 0.06);
+    border: 1px solid rgba(108, 92, 231, 0.15);
+    border-radius: 14px;
+    transition: all 0.35s var(--ease);
+}
+
+.education-badge:hover {
+    background: rgba(108, 92, 231, 0.1);
+    border-color: rgba(108, 92, 231, 0.25);
+}
+
+.education-badge svg {
+    color: var(--accent-2);
+    flex-shrink: 0;
+}
+
+.education-badge div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.edu-degree {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.edu-school {
+    font-size: 0.82rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+}
+
+/* Resume button */
+.resume-btn svg {
+    transition: transform 0.3s var(--ease);
+}
+
+.resume-btn:hover svg {
+    transform: translateY(2px);
+}
+
 .about-stats {
     display: grid;
     gap: 20px;
